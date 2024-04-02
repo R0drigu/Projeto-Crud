@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro e Listagem</title>
+  <link rel="stylesheet" href="projeto.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Cadastro de Funcionários</h1>
+      <button onclick="openModal()" id="btn-add" aria-label="Adicionar Funcionário"><i class='bx bx-plus'></i></button>
+    </header>
+
+    <div class="divTable">
+      <table id="employeeTable">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Função</th>
+            <th>Salário</th>
+          </tr>
+        </thead>
+        <tbody id="employeeList">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container" id="modalContainer">
+      <div class="modal">
+        <form id="employeeForm">
+          <label for="m-nome">Nome <span>*</span></label>
+          <input id="m-nome" type="text" required />
+  
+          <label for="m-funcao">Função <span>*</span></label>
+          <input id="m-funcao" type="text" required />
+  
+          <label for="m-salario">Salário <span>*</span></label>
+          <input id="m-salario" type="number" required />
+          <div class="modal-buttons">
+            <button type="button" id="btnCancel" onclick="closeModal()">Cancelar</button>
+            <button type="submit" id="btnSalvar">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="projeto.js"></script>
+</body>
+
+</html>
